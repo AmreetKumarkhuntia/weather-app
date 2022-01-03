@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@font-face {
+  font-family: Helevetica;
+  src: url(./fonts/Helvetica.ttf);
+}
+
+body {
+  margin: 0;
+  color: #EDF5E1;
+  background-color: #5CDB95;
+}
+
+body header {
+  margin: 0% 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header h2 {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 5px;
+  display: inline-block;
+}
+
+body header .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 80vw;
+}
+
+body header .grid .links {
+  padding: 0% 4%;
+  display: inline-block;
+}
+
+body header .grid .links a {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  color: #EDF5E1;
+  text-transform: uppercase;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body header .grid .links a:hover {
+  color: #379683;
+}
+
+body .weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Helvetica, sans-serif;
+}
+
+body .weather .parameter_title {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 6px;
+  font-size: 40px;
+}
+
+body .weather .get-weatherforecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 25px;
+}
+
+body .weather .get-weatherforecast .titles {
+  width: 50vw;
+  text-align: right;
+  padding: 1%;
+}
+
+body .weather .get-weatherforecast .parameters {
+  width: 50vw;
+  padding: 1%;
+}
+
+body .weather .get-weatherforecast .parameters .input {
+  border-radius: 5px;
+  border: none;
+  height: 23px;
+  width: 140px;
+  background-color: #EDF5E1;
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.685);
+  text-align: center;
+}
+
+body .weather button {
+  height: 30px;
+  width: 150px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #469c6d;
+  background-color: #EDF5E1;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body .weather button:hover {
+  background-color: #379683;
+  color: #EDF5E1;
+}
+
+body .weather .separator {
+  width: 94vw;
+  margin: 2%;
+  border-top: 2px dashed #EDF5E1;
+}
+
+body .weather .show-weatherforecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .weather .show-weatherforecast .details {
+  margin: auto;
+  display: block;
+  width: 94vw;
+}
+
+body .weather .show-weatherforecast .details .subheader {
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 20px;
+  -webkit-transform: translate(0px, 15px);
+          transform: translate(0px, 15px);
+  display: inline-block;
+  border-left: 3px solid #EDF5E1;
+  border-radius: 1px;
+  padding-left: 5px;
+}
+
+body .weather .show-weatherforecast .details h1 {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 10px;
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+body .weather .show-weatherforecast .details .country_details ul {
+  padding: 0;
+}
+
+body .weather .show-weatherforecast .details .country_details li {
+  list-style: none;
+  font-size: 16px;
+  padding: 3px;
+  padding-left: 0px;
+}
+
+body .weather .show-weatherforecast .card_title {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin: auto;
+  border-bottom: 2px dashed #EDF5E1;
+}
+
+body .weather .show-weatherforecast .cards {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: auto;
+}
+
+body .weather .show-weatherforecast .cards .weathercard {
+  background-color: #EDF5E1;
+  color: #5CDB95;
+  padding: 2%;
+  border-radius: 10px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  display: inline-block;
+  margin: 20px;
+}
+
+body .weather .show-weatherforecast .cards .weathercard h3 {
+  display: inline-block;
+}
+
+body .weather .show-weatherforecast .cards .weathercard h5 {
+  display: inline-block;
+  margin: 0px;
+}
+
+body .weather .show-weatherforecast .cards .weathercard:hover {
+  -webkit-filter: drop-shadow(5px 5px 5px #379683);
+          filter: drop-shadow(5px 5px 5px #379683);
+}
+/*# sourceMappingURL=app.css.map */

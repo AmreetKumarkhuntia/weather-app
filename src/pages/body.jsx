@@ -2,7 +2,9 @@ import Showweather from "./components/showweather";
 import React from "react";
 import { useState } from "react";
 
+
 const Body = () => {
+    const apikey=process.env.REACT_APP_API_KEY;
     let lat = "65";
     let lon = "65"
     let unit = "imperial", lang = "en";
@@ -34,7 +36,7 @@ const Body = () => {
             method: 'GET',
             headers: {
                 'x-rapidapi-host': 'weatherbit-v1-mashape.p.rapidapi.com',
-                'x-rapidapi-key': 'd383b6800cmsh5711cb6a2acfc3dp17a991jsn31401bc7319d',
+                'x-rapidapi-key': apikey,
                 useQueryString: true
             }
         }

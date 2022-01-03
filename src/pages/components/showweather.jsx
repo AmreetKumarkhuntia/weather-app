@@ -3,6 +3,13 @@ const showweather = (props) => {
 
     function weathercardmapping(items) {
         var logo_url = "https://www.weatherbit.io/static/img/icons/" + items.weather.icon + ".png";
+        var temp;
+        console.log(props.unit);
+        if(props.unit==='imperial'){
+            temp='F';
+        }
+        else
+            temp='C';
         return (
             <div className="weathercard">
                 <img src={logo_url} alt="weather_logo"></img> <br />
@@ -10,7 +17,7 @@ const showweather = (props) => {
                     {items.weather.description}
                 </h3>
                 <br />
-                <h5>Temperature :</h5> {items.app_temp} F<br />
+                <h5>Temperature :</h5> {items.app_temp} {temp}<br />
                 <h5>Date and Time :</h5> {items.datetime}<br />
                 <h5>Clouds :</h5> {items.clouds}
             </div>

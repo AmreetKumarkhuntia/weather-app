@@ -7,8 +7,9 @@ const Body = () => {
     const apikey=process.env.REACT_APP_API_KEY;
     let lat = "65";
     let lon = "65"
-    let unit = "imperial", lang = "en";
+    let lang = "en";
 
+    let [unit,setUnit]=useState('imperial');
     const units = ["imperial", "metric"];
     const langs = ["en", "ar", "az", "be"];
 
@@ -65,7 +66,7 @@ const Body = () => {
                         lon = e.target.value;
                     }}></input><br />
                     <select className="input" onClick={(e) => {
-                        unit = e.target.value;
+                        setUnit(e.target.value);
                     }}>
                         {units.map(unitmapping)}
                     </select><br />
@@ -81,7 +82,7 @@ const Body = () => {
             }}>Get Weather</button>
             <div className="separator" />
             <div>
-                {dataisloaded&&<Showweather Dataisloaded={dataisloaded} items={items} />}
+                {dataisloaded&&<Showweather unit={unit} Dataisloaded={dataisloaded} items={items} />}
             </div>
         </div>
     );

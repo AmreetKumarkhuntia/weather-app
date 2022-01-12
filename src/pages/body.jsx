@@ -67,7 +67,7 @@ const Body = () => {
                 <tr>
                     <td className="titles">Enter Latitude:</td>
                     <td className="parameters">
-                        <input type="text" className="input" placeholder={lat} onChange={(e) => {
+                        <input type="text" className="input" placeholder={lat+"(default)"} onChange={(e) => {
                             lat = e.target.value;
                         }} />
                     </td>
@@ -75,7 +75,7 @@ const Body = () => {
                 <tr>
                     <td className="titles">Enter Longitude:</td>
                     <td className="parameters" >
-                        <input type="text" className="input" placeholder={lon} onChange={(e) => {
+                        <input type="text" className="input" placeholder={lon+"(default)"} onChange={(e) => {
                             lon = e.target.value;
                         }} />
                     </td>

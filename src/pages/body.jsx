@@ -5,9 +5,10 @@ import { useState } from "react";
 
 const Body = () => {
     const apikey = process.env.REACT_APP_API_KEY;
-    let lat = "28.6139";
-    let lon = "77.2090"
     let lang = "en";
+
+    const [lat,setLat]=useState("28.6139");
+    const [lon,setLon]=useState("77.2090");
 
     let [unit, setUnit] = useState('imperial');
     const units = ["imperial", "metric"];
@@ -33,8 +34,8 @@ const Body = () => {
     function fetchlocation(){
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                lat=position.coords.latitude;
-                lon=position.coords.longitude;
+                setLat(position.coords.latitude);
+                setLon(position.coords.longitude);
                 alert("Current latitude set to "+lat+" and longitude to "+ lon);
               });
           } else {
@@ -67,16 +68,16 @@ const Body = () => {
                 <tr>
                     <td className="titles">Enter Latitude:</td>
                     <td className="parameters">
-                        <input type="text" className="input" placeholder={lat+"(default)"} onChange={(e) => {
-                            lat = e.target.value;
+                        <input type="text" className="input" placeholder={lat} onChange={(e) => {
+                            setLat(e.target.value);
                         }} />
                     </td>
                 </tr>
                 <tr>
                     <td className="titles">Enter Longitude:</td>
                     <td className="parameters" >
-                        <input type="text" className="input" placeholder={lon+"(default)"} onChange={(e) => {
-                            lon = e.target.value;
+                        <input type="text" className="input" placeholder={lon} onChange={(e) => {
+                            setLon(e.target.value);
                         }} />
                     </td>
                 </tr>
